@@ -1,0 +1,13 @@
+class greatest
+ {
+  public static void main(String[] args) 
+   {
+   int a=13,b=10,c=16;
+   if (a>b && a>c)
+   System.out.println("a is greatest");
+   else if (b>c)
+   System.out.println("b is greatest  ");
+   else
+   System.out.println("c is greatest");
+   }
+ }
