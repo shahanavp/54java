@@ -1,0 +1,12 @@
+ class circle 
+ {
+  public static void main(String[] args)
+ {
+   double r=7.5d;
+   double area,peri;
+   area=3.14*(7.5*7.5);
+   peri=2*3.14*7.5;
+   System.out.println("area = "+area);
+   System.out.println("peri = "+peri);
+  }
+}
