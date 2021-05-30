@@ -1,0 +1,12 @@
+class sumavg
+ {
+  public static void main(String[] args) 
+  {
+  int a=1,b=2,c=6,d=5,e=3;
+  float sum,average;
+  sum=a+b+c+d+e;
+  System.out.println("sum ="+sum);
+  average=(sum)/5;
+  System.out.println("average ="+average);
+  }
+ }
