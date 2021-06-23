@@ -1,38 +1,37 @@
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
-class StringArray{
-    int limit;
-    String[] str;
-
-    StringArray(int limit){
-        this.limit = limit;
-        str = new String[limit];
-    }
-
-    void CreateArray(Scanner read){
-        System.out.println("Enter the elements : ");
-        for (int i=0; i<limit; i++)
-        {
-            str[i] = read.nextLine();
-        }
-    }
-
-    void SortString(){
-        Arrays.sort(str);
-        System.out.print(Arrays.toString(str)+"\n");
-    }
+class Name {
+    String word;
 }
 
-public class SortString{
-    public static void main(String args[]){
-        int limit;
-        Scanner read = new Scanner(System.in);
-        System.out.print("Enter the limit:");
-        limit = read.nextInt();
-        read.nextLine();
-        StringArray sa = new StringArray(limit);
-        sa.CreateArray(read);
-        sa.SortString();
+public class Sort {
+    public static void main(String[] args) {
+        int temp;
+        Name str1 = new Name();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a String : ");
+        str1.word = sc.nextLine();
+
+        int length = str1.word.length();
+
+        char Sarr[] = str1.word.toCharArray();
+
+        for (int i = 0; i < length - 1; i++) {
+            for (int j = i + 1; j < length; j++) {
+                if (Sarr[i] > Sarr[j]) {
+                    temp = Sarr[i];
+                    Sarr[i] = Sarr[j];
+                    Sarr[j] = (char) temp;
+                }
+
+            }
+
+        }
+
+        System.out.println(new String(Sarr));
+
     }
+
 }
