@@ -1,17 +1,21 @@
-public class CPU {
+public class CPU 
+{
     int price = 20000;
 
-    class Processor {
+    class Processor
+    {
         int no_of_cores = 2;
         String manufaturer = "Intel";
     }
 
-    static class RAM {
+    static class RAM 
+    {
         int memory = 8;
         String manufaturer = "Micron";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         CPU cpu = new CPU();
         CPU.Processor processor = cpu.new Processor();
         RAM ram = new RAM();
