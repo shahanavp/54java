@@ -1,39 +1,34 @@
 import java.util.Scanner;
 
-class StringArray {
-    String[] str;
+public class ArraySearch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size;
+        int elem;
+        System.out.println("Enter the size of the Array : ");
+        size = sc.nextInt();
 
-    StringArray(String[] str) {
-        this.str = str;
-    }
+        int arr[] = new int[size];
 
-    void search(Scanner read) {
-        String item;
-        System.out.print("Enter the Item to be searched :");
-        item = read.nextLine();
-        for (int i = 0; i < str.length; i++) {
-            if (item.equals(str[i])) {
-                System.out.println("Item found in the array");
-                return;
+        System.out.println("Enter the Elements : ");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter the element to be searched : ");
+        elem = sc.nextInt();
+
+        for (int i = 0; i < size; i++) 
+        {
+            if (arr[i] == elem) 
+            {
+                System.out.println(elem + " found at position " + (i + 1));
+                System.exit(0);
+                ;
             }
         }
-        System.out.println("Item not found");
-    }
-}
+        System.out.println("Element not found");
 
-public class SearchArrayElement {
-    public static void main(String args[]) {
-        int limit;
-        Scanner read = new Scanner(System.in);
-        System.out.print("Enter the limit:");
-        limit = read.nextInt();
-        read.nextLine();
-        String[] str = new String[limit];
-        System.out.print("Enter Array Elements:");
-        for (int i = 0; i < limit; i++) {
-            str[i] = read.nextLine();
-        }
-        StringArray s = new StringArray(str);
-        s.search(read);
     }
+
 }
