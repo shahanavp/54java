@@ -1,0 +1,29 @@
+//perform string manipulations
+
+import java.util.Scanner;
+class Str 
+    {
+    String word;
+    }
+
+public class StringManipulation 
+{
+    public static void main(String[] args)
+    {
+
+        Str wor = new Str();
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a String : ");
+        wor.word = sc.nextLine();
+
+        System.out.println("The length of the string usng length() function : " + wor.word.length());
+        System.out.println("Using toLowerCase() function : " + wor.word.toLowerCase());
+        System.out.println("Using toUpperCase() function : " + wor.word.toUpperCase());
+        System.out.println("Checks whether a string is empty(TRUE) or not(False) using isEmpty() function : "
+                + wor.word.isEmpty());
+        System.out.println("Returns the hash code of a string using hashCode() function : " + wor.word.hashCode());
+
+    }
+}
